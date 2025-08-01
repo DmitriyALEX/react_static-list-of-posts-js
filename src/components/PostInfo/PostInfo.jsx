@@ -1,7 +1,8 @@
-import { CommentList } from '../CommentList/CommentList';
-import './PostInfo.scss';
+import { CommentList } from '../CommentList/CommentList'
+import './PostInfo.scss'
 
 export const PostInfo = ({ post }) => {
+  console.log('post', post)
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -19,7 +20,11 @@ export const PostInfo = ({ post }) => {
       <p className="PostInfo__body">{post.body}</p>
 
       {post.comments !== undefined ? (
-        <CommentList comments={post.comments} />
+        <>
+          {post.comments.map((comment) => (
+            <CommentList comment={comment} />
+          ))}
+        </>
       ) : (
         <>
           <hr />
@@ -28,5 +33,5 @@ export const PostInfo = ({ post }) => {
         </>
       )}
     </div>
-  );
-};
+  )
+}

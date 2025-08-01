@@ -1,19 +1,21 @@
-import './CommentList.scss';
+import './CommentList.scss'
 
-export const CommentList = ({ comments }) => {
+export const CommentList = ({ comment }) => {
   return (
-    <div className="CommentInfo">
-      <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{comments.name}</strong>
+    <div className="CommentList">
+      <div className="CommentInfo">
+        <div className="CommentInfo__title">
+          <strong className="CommentInfo__name">{comment.name}</strong>
 
-        {' by '}
+          {' by '}
 
-        <a className="CommentInfo__email" href={`mailto:${comments.email}`}>
-          {comments.email}
-        </a>
+          <a className="CommentInfo__email" href={`mailto:${comment.email}`}>
+            {comment.email}
+          </a>
+        </div>
+
+        <div className="CommentInfo__body">{comment.body}</div>
       </div>
-
-      <div className="CommentInfo__body">{comments.body}</div>
     </div>
-  );
-};
+  )
+}
