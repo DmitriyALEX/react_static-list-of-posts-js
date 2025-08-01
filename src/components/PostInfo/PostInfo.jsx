@@ -1,4 +1,6 @@
 import { CommentList } from '../CommentList/CommentList'
+import { UserInfo } from '../UserInfo/UserInfo'
+
 import './PostInfo.scss'
 
 export const PostInfo = ({ post }) => {
@@ -9,25 +11,17 @@ export const PostInfo = ({ post }) => {
 
         <p>
           {' Posted by  '}
-
-          <a className="UserInfo" href={`mailto:${post.user.email}`}>
-            {post.user.name}
-          </a>
+          <UserInfo user={post.user} />
         </p>
       </div>
 
       <p className="PostInfo__body">{post.body}</p>
 
-      {post.comments.length > 0 ? (
-        <>
-          {post.comments.map((comment) => (
-            <CommentList comment={comment} key={comment.id} />
-          ))}
-        </>
+      {post.comments && post.comments.length > 0 ? (
+        <CommentList comments={post.comments} />
       ) : (
         <>
           <hr />
-
           <b data-cy="NoCommentsMessage">No comments yet</b>
         </>
       )}
