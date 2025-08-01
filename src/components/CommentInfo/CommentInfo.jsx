@@ -1,5 +1,5 @@
 export const CommentInfo = ({ comment }) => {
-  const { name, email, body } = comment
+  const { name, email, body } = comment;
 
   return (
     <div className="CommentInfo">
@@ -15,5 +15,5 @@ export const CommentInfo = ({ comment }) => {
 
       <div className="CommentInfo__body">{body}</div>
     </div>
-  )
-}
+  );
+};

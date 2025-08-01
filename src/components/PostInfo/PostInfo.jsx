@@ -1,7 +1,7 @@
-import { CommentList } from '../CommentList/CommentList'
-import { UserInfo } from '../UserInfo/UserInfo'
+import { CommentList } from '../CommentList/CommentList';
+import { UserInfo } from '../UserInfo/UserInfo';
 
-import './PostInfo.scss'
+import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
   return (
@@ -26,5 +26,5 @@ export const PostInfo = ({ post }) => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
