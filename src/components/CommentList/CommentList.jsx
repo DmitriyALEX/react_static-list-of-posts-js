@@ -1,25 +1,16 @@
-import { CommentInfo } from '../CommentInfo/CommentInfo';
-import './CommentList.scss';
+import { CommentInfo } from '../CommentInfo/CommentInfo'
+import './CommentList.scss'
 
-export const CommentList = comments => {
+export const CommentList = (comments) => {
   return (
     <div className="CommentList">
-      {comments.comments.map(comment => (
-        <div className="CommentInfo" key={comment.id}>
-          <div className="CommentInfo__title">
-            <strong className="CommentInfo__name">{comment.name}</strong>
-
-            {' by '}
-            <CommentInfo comment={comment} />
-
-            <a className="CommentInfo__email" href={`mailto:${comment.email}`}>
-              {comment.email}
-            </a>
-          </div>
-
+      {comments.comments.map((comment) => (
+        <div>
+          {' by '}
+          <CommentInfo comment={comment} />
           <div className="CommentInfo__body">{comment.body}</div>
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
