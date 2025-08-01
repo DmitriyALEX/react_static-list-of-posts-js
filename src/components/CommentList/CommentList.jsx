@@ -1,4 +1,4 @@
-import './CommentList.scss'
+import './CommentList.scss';
 
 export const CommentList = ({ comment }) => {
   return (
@@ -17,5 +17,5 @@ export const CommentList = ({ comment }) => {
         <div className="CommentInfo__body">{comment.body}</div>
       </div>
     </div>
-  )
-}
+  );
+};
