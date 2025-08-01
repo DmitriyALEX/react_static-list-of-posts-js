@@ -1,5 +1,5 @@
-import { CommentList } from '../CommentList/CommentList'
-import './PostInfo.scss'
+import { CommentList } from '../CommentList/CommentList';
+import './PostInfo.scss';
 
 export const PostInfo = ({ post }) => {
   return (
@@ -28,5 +28,5 @@ export const PostInfo = ({ post }) => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
